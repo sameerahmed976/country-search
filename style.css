@@ -91,19 +91,28 @@ img {
   min-height: 100vh;
   display: grid;
   align-items: start;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .main-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   max-width: 100vw;
-  box-shadow: var(--box-shadow-1);
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
+.main-heading {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  color: orange;
+}
+
 .form-row {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
   justify-content: center;
   max-width: 300px;
   width: 100%;
@@ -113,21 +122,28 @@ img {
 
 .form-search {
   padding: 0.4rem 0.4rem;
-  max-width: 200px;
+  max-width: 180px;
   border: transparent;
   border-bottom: 2px solid gray;
   font-size: 1rem;
+  padding-left: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.174);
+  transition: var(--transition-8);
 }
 
 .form-search::placeholder {
   text-transform: lowercase;
+  font-size: 0.8rem;
   letter-spacing: 2px;
+  color: white;
 }
 
 .form-search:focus,
 .form-search:hover {
   border-bottom: 2px solid green;
   outline: transparent;
+  background-color: white;
 }
 
 .container {
@@ -154,7 +170,7 @@ img {
   text-transform: capitalize;
   letter-spacing: 1px;
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
-  color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
   line-height: var(--line-height);
 }
@@ -197,7 +213,7 @@ hr {
   border-left: 5px solid rgb(97, 9, 238);
   border-right: 5px solid rgb(181, 8, 224);
   border-radius: 50%;
-  animation: spin 1s linear normal infinite both;
+  animation: spin 1s linear alternate infinite both;
   margin: 0 auto;
 }
 
@@ -229,12 +245,18 @@ hr {
 
 @media only screen and (min-width: 576px) {
   .form-row {
-    gap: 3rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  .form-search {
+    width: 100%;
+    max-width: 400px;
+    display: block;
   }
 
   .container {
     max-width: 400px;
-    box-shadow: var(--box-shadow-1);
   }
   .image {
     width: 100%;
